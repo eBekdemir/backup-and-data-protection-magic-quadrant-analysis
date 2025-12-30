@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #003366; /* Dark Blue */
+    --secondary-color: #F0F0F0; /* Light Gray */
+    --accent-color: #4A90E2; /* Bright Blue */
+    --text-color: #333333;
+    --bg-color: #FFFFFF;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Navigation --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+main {
+    padding-top: 60px; /* Offset for fixed navbar */
+}
+
+/* --- Hero Section --- */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(95vh - 60px);
+    text-align: center;
+    background-color: var(--secondary-color);
+    /* padding: 2rem; */
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    max-height: 75vh;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#hero figcaption {
+    /* margin-top: 1rem; */
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* --- Enes Section --- */
+.enes-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    max-width: 400px;
+    margin: 1rem auto;
+    margin-top: 0;
+}
+
+.enes-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.enes-info h2 {
+    margin: 0 0 0.5rem 0;
+    border-bottom: none;
+    font-size: 1.5rem;
+}
+
+.enes-info p {
+    margin: 0;
+    color: #555;
+}
+
+.enes-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.enes-info a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* --- GitHub Link Section --- */
+#githublink-container {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+#githublink-container p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#githublink {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#githublink:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* --- Axis Definitions --- */
+.axis-definitions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* --- Quadrant Section --- */
+.quadrant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.quadrant-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.quadrant-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.quadrant-card h3 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Criteria Section --- */
+.criteria-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.criteria-list ul {
+    padding-left: 25px;
+}
+.criteria-list li {
+    margin-bottom: 0.75rem;
+}
+
+/* --- Analysis Section --- */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.analysis-grid .strength ul,
+.analysis-grid .limitation ul {
+    padding-left: 20px;
+}
+
+.analysis-grid .strength h3 {
+    color: #28a745; /* Green */
+}
+
+.analysis-grid .limitation h3 {
+    color: #dc3545; /* Red */
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #navbar {
+        overflow-x: auto;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .axis-definitions,
+    .criteria-list,
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+}
